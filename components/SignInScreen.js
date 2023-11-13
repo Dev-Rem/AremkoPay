@@ -13,24 +13,22 @@ import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { ForgotPassword } from "./ForgotPassword";
 import { ResetPassword } from "./ResetPassword";
-export const SignInScreen = () => {
+export const SignInScreen = ({ navigation }) => {
   const [form, setForm] = React.useState("signin");
   const [checked, setChecked] = React.useState(false);
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View className="flex-1 bg-[#DAE8DA] flex-column justify-between ">
           <View></View>
-          <View></View>
-
           <Image
             source={require("../assets/AremkoPay.png")}
             className="w-[85%] h-[80px] rounded-t-[10px] rounded-b-[10px] m-[30px]"
           />
-          <View className="bg-[#FFFF] h-[60%] w-[100%] rounded-tr-[50px] justify-center p-[30px] ">
+          <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-center p-[30px] ">
             {form === "signup" ? (
               <>
                 <SignUp />
@@ -59,7 +57,7 @@ export const SignInScreen = () => {
             )}
             {form === "signin" ? (
               <>
-                <SignIn />
+                <SignIn navigation={navigation} />
                 <View className="justify-between flex-row w-[100%]">
                   <TouchableOpacity onPress={() => setForm("signup")}>
                     <Text className="font-semibold">Sign Up</Text>
