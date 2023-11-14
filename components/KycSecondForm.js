@@ -16,7 +16,7 @@ export const KycSecondForm = ({ pickImage, types, type, setType }) => {
         <Text className="font-medium m-[5]">Account type</Text>
         <TouchableOpacity
           onPress={() => setIsVisible(true)}
-          className="h-[60px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px]"
+          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px]"
         >
           {type !== null ? (
             <Text className="text-[black]">{type}</Text>
@@ -31,7 +31,7 @@ export const KycSecondForm = ({ pickImage, types, type, setType }) => {
           <TextInput
             placeholder="Company name"
             placeholderTextColor={"#b2b2b2"}
-            className="h-[60px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px] "
+            className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px] "
           />
         </View>
       ) : (
@@ -50,14 +50,14 @@ export const KycSecondForm = ({ pickImage, types, type, setType }) => {
               : "Bank verification number"
           }
           placeholderTextColor={"#b2b2b2"}
-          className="h-[60px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px] "
+          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px] "
         />
       </View>
       <View className="w-[100%] m-[2%] ">
         <Text className="font-medium m-[5]">Document Upload</Text>
         <TouchableOpacity
           onPress={pickImage}
-          className="h-[60px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px]"
+          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px]"
         >
           <Text className="text-[#b2b2b2]">
             {type === "Corprate account"
@@ -79,9 +79,10 @@ export const KycSecondForm = ({ pickImage, types, type, setType }) => {
         }}
       >
         <View className=" flex-1 bg-[#545454] justify-center items-center opacity-[1]">
-          <View className="w-[60%] h-[40%] bg-[#ffff] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px]">
-            {types.map((option) => (
+          <View className="w-[60%] max-h-[100%] bg-[#ffff] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px]">
+            {types.map((option, key) => (
               <TouchableOpacity
+                key={key}
                 onPress={() => {
                   setType(option);
                   setIsVisible(false);
