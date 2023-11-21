@@ -31,7 +31,7 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
         {Array.from({ length: 9 }).map((_, index) => (
           <TouchableOpacity
             key={index}
-            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]"
+            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
             onPress={() => handleNumberPress(index + 1)}
           >
             <Text className="text-[20px]">{index + 1}</Text>
@@ -39,18 +39,21 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
         ))}
         <TouchableOpacity
           onPress={handleDeletePress}
-          className="w-[25%] h-[20%] justify-center items-center m-[10]  rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]"
+          className="w-[25%] h-[20%] justify-center items-center m-[10]  rounded-[10px]"
         >
           <Icon name="backspace" type="material" size={30} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleNumberPress(0)}
-          className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]"
+          className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
         >
           <Text className="text-[20px]">0</Text>
         </TouchableOpacity>
-        <TouchableOpacity className="w-[25%] h-[20%] justify-center items-center m-[10] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]">
-          <Icon name="check" type="material" size={35} />
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Dashboard")}
+          className="w-[25%] h-[20%] justify-center items-center m-[10] rounded-[10px]"
+        >
+          <Icon name="done-all" type="material" size={35} />
         </TouchableOpacity>
       </View>
     </>

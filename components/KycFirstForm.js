@@ -9,7 +9,7 @@ export const KycFirstForm = () => {
         <TextInput
           placeholder="First name"
           placeholderTextColor={"#b2b2b2"}
-          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px] "
+          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-[10px] p-[10px] "
         />
       </View>
 
@@ -19,7 +19,7 @@ export const KycFirstForm = () => {
           <TextInput
             placeholder="Middle name"
             placeholderTextColor={"#b2b2b2"}
-            className="h-[40px] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px] "
+            className="h-[40px] bg-[#F2F2F2] rounded-[10px] p-[10px] "
           />
         </View>
 
@@ -28,7 +28,7 @@ export const KycFirstForm = () => {
           <TextInput
             placeholder="Last name"
             placeholderTextColor={"#b2b2b2"}
-            className="h-[40px] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px]"
+            className="h-[40px] bg-[#F2F2F2] rounded-[10px] p-[10px]"
           />
         </View>
       </View>
@@ -37,7 +37,7 @@ export const KycFirstForm = () => {
         <TextInput
           placeholder="Phone number"
           placeholderTextColor={"#b2b2b2"}
-          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px] "
+          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-[10px] p-[10px] "
         />
         <Text className="font-light text-[10px] m-[5]">
           Note: Please input phone number in international format
@@ -49,7 +49,7 @@ export const KycFirstForm = () => {
         <TextInput
           placeholder="Country"
           placeholderTextColor={"#b2b2b2"}
-          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[10px] "
+          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-[10px] p-[10px] "
         />
       </View>
     </View>

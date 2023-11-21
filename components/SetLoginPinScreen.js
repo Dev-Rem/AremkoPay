@@ -28,10 +28,9 @@ export const SetLoginPinScreen = ({ navigation }) => {
               {form === "first" ? "Enter" : "Confirm"} login pin
             </Text>
             <Text className="text-[12px] px-[20px]">
-              Before we proceed, let's set up a secure login PIN for your
-              account. This PIN will be used to enhance the security of your
-              account. Make sure to choose a PIN that is easy for you to
-              remember, but not too obvious to others.
+              {form === "first"
+                ? "Before we proceed, let's set up a secure login PIN for your account. This PIN will be used to enhance the security of your account. Make sure to choose a PIN that is easy for you to remember, but not too obvious to others."
+                : ""}
             </Text>
           </View>
 

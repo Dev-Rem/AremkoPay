@@ -12,19 +12,19 @@ export const ResetPassword = () => {
         <TextInput
           placeholder="Reset code"
           placeholderTextColor={"#b2b2b2"}
-          className="h-[60] w-[85%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20] my-[8%]"
+          className="h-[60] w-[85%] bg-[#F2F2F2] rounded-[10px] p-[20] my-[8%]"
         />
         <View className=" flex-row w-[85%] justify-between">
           <TextInput
             placeholder="New password"
             placeholderTextColor={"#b2b2b2"}
-            className="h-[60] w-[45%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px] "
+            className="h-[60] w-[45%] bg-[#F2F2F2] rounded-[10px] p-[20px] "
           />
 
           <TextInput
             placeholder="Confirm password"
             placeholderTextColor={"#b2b2b2"}
-            className="h-[60] w-[45%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px] mb-[15%]"
+            className="h-[60] w-[45%] bg-[#F2F2F2] rounded-[10px] p-[20px] mb-[15%]"
           />
         </View>
 

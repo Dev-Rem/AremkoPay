@@ -33,26 +33,26 @@ export const EnterLoginPin = ({ pin, setPin, setForm }) => {
           <TouchableOpacity
             key={index}
             onPress={() => handleNumberPress(index + 1)}
-            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]"
+            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
           >
             <Text className="text-[20px]">{index + 1}</Text>
           </TouchableOpacity>
         ))}
         <TouchableOpacity
           onPress={() => handleDeletePress()}
-          className="w-[25%] h-[20%] justify-center items-center m-[10]  rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]"
+          className="w-[25%] h-[20%] justify-center items-center m-[10]  rounded-[10px]"
         >
           <Icon name="backspace" type="material" size={30} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleNumberPress(0)}
-          className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]"
+          className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
         >
           <Text className="text-[20px]">0</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => setForm("second")}
-          className="w-[25%] h-[20%] justify-center items-center m-[10] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px]"
+          className="w-[25%] h-[20%] justify-center items-center m-[10] rounded-[10px]"
         >
           <Icon name="arrow-forward" type="material" size={35} />
         </TouchableOpacity>

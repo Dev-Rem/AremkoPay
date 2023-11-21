@@ -11,12 +11,12 @@ export const SignIn = ({ navigation }) => {
         <TextInput
           placeholder="Email address"
           placeholderTextColor={"#b2b2b2"}
-          className="h-[60px] w-[85%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px] my-[8%]"
+          className="h-[60px] w-[85%] bg-[#F2F2F2]  rounded-[10px] p-[20px] my-[8%]"
         />
         <TextInput
           placeholder="Password"
           placeholderTextColor={"#b2b2b2"}
-          className="h-[60px] w-[85%] bg-[#F2F2F2] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[20px] mb-[15%]"
+          className="h-[60px] w-[85%] bg-[#F2F2F2] rounded-[10px] p-[20px] mb-[15%]"
         />
         <TouchableOpacity
           onPress={() => navigation.navigate("Kyc")}

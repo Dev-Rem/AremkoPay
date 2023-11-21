@@ -94,9 +94,7 @@ export const KycScreen = ({ navigation }) => {
                   className="h-[40] w-[25%] bg-[#DAE8DA] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
                 >
                   {form === "second" ? (
-                    <Text className="font-semibold text-[14px] text-center">
-                      Submit
-                    </Text>
+                    <Icon name={"done-all"} type="material" size={30} />
                   ) : (
                     <Icon name={"arrow-forward"} type="material" size={30} />
                   )}
