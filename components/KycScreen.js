@@ -46,7 +46,7 @@ export const KycScreen = ({ navigation }) => {
     >
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-          <View className="flex-1 bg-[#DAE8DA] flex-column justify-end pt-[40%]">
+          <View className="flex-1 bg-[#28e068] flex-column justify-end pt-[40%]">
             <View></View>
             <View className="mb-[20px]">
               <Text className="text-2xl font-bold px-[20px] mb-[10px]">
@@ -56,7 +56,7 @@ export const KycScreen = ({ navigation }) => {
                 Financial regulators in Nigeria require you to verify your
                 identity to use this service.
               </Text>
-              <Text className="text-[12px] px-[20px]">
+              <Text className="text-[12px] px-[20px] text-[#ffff]">
                 This is a mandatory step that enables us serve you better.
               </Text>
             </View>
@@ -78,7 +78,7 @@ export const KycScreen = ({ navigation }) => {
                 {form === "second" ? (
                   <TouchableOpacity
                     onPress={() => setForm("first")}
-                    className="h-[40] w-[25%] bg-[#DAE8DA] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
+                    className="h-[40] w-[25%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
                   >
                     <Icon name={"arrow-back"} type="material" size={30} />
                   </TouchableOpacity>
@@ -91,7 +91,7 @@ export const KycScreen = ({ navigation }) => {
                       ? setForm("second")
                       : navigation.navigate("SetPin")
                   }
-                  className="h-[40] w-[25%] bg-[#DAE8DA] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
+                  className="h-[40] w-[25%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
                 >
                   {form === "second" ? (
                     <Icon name={"done-all"} type="material" size={30} />

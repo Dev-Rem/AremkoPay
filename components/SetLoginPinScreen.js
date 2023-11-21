@@ -21,7 +21,7 @@ export const SetLoginPinScreen = ({ navigation }) => {
       behavior={Platform.OS === "ios" ? "height" : undefined}
     >
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-        <View className="flex-1 bg-[#DAE8DA] flex-column justify-end pt-[40%]">
+        <View className="flex-1 bg-[#28e068] flex-column justify-end pt-[40%]">
           <View></View>
           <View className="mb-[20px]">
             <Text className="text-2xl font-bold px-[20px] mb-[10px]">

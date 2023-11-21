@@ -15,7 +15,7 @@ export const ForgotPassword = ({ setForm }) => {
         />
         <TouchableOpacity
           onPress={() => setForm("resetpassword")}
-          className="h-[60] w-[85%] bg-[#DAE8DA] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[15] mb-[10%]"
+          className="h-[60] w-[85%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[15] mb-[10%]"
         >
           <Text className="text-xl font-semibold text-center">Send code</Text>
         </TouchableOpacity>
