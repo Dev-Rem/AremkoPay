@@ -7,6 +7,7 @@ import {
   Modal,
   Pressable,
 } from "react-native";
+import CustomFormField from "./utils/CustomFormField";
 
 export const KycSecondForm = ({ pickImage, types, type, setType }) => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -28,10 +29,9 @@ export const KycSecondForm = ({ pickImage, types, type, setType }) => {
       {type === "Corprate account" ? (
         <View className="w-[100%] m-[2%] ">
           <Text className="font-medium m-[5]">Company name</Text>
-          <TextInput
-            placeholder="Company name"
-            placeholderTextColor={"#b2b2b2"}
-            className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-[10px] p-[10px] "
+          <CustomFormField
+            placeholder={"Company name"}
+            extraStyle={"h-[40px] "}
           />
         </View>
       ) : (
@@ -43,14 +43,14 @@ export const KycSecondForm = ({ pickImage, types, type, setType }) => {
             ? "Corprate TIN number"
             : "Bank verification number"}
         </Text>
-        <TextInput
+        <CustomFormField
           placeholder={
             type === "Corprate account"
               ? "Corprate TIN number"
               : "Bank verification number"
           }
-          placeholderTextColor={"#b2b2b2"}
-          className="h-[40px] w-[100%] bg-[#F2F2F2] rounded-[10px] p-[10px] "
+          extraStyle={"h-[40px] "}
+          inputMode="numeric"
         />
       </View>
       <View className="w-[100%] m-[2%] ">

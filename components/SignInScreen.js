@@ -24,11 +24,11 @@ export const SignInScreen = ({ navigation }) => {
     >
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View className="flex-1 bg-[#28e068] flex-column justify-between ">
-          <View className="bg-[#ffff] h-[25%] w-[25%] rounded-[50%]"></View>
-          {/* <Image
+          <View></View>
+          <Image
             source={require("../assets/AremkoPay.png")}
-            className="w-[85%] h-[80px] rounded-t-[10px] rounded-b-[10px] m-[30px]"
-          /> */}
+            className="w-[85%] h-[80px] rounded-tr-[60px] rounded-br-[10px] mt-[30px] "
+          />
           <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-center p-[30px] ">
             {form === "signup" ? (
               <>
@@ -88,7 +88,7 @@ export const SignInScreen = ({ navigation }) => {
             )}
             {form === "resetpassword" ? (
               <>
-                <ResetPassword />
+                <ResetPassword setForm={setForm} />
                 <View className="justify-between flex-row w-[100%]">
                   <TouchableOpacity onPress={() => setForm("forgotpassword")}>
                     <Text className="font-semibold">Back</Text>
@@ -103,7 +103,7 @@ export const SignInScreen = ({ navigation }) => {
             )}
             {form === "verifyemail" ? (
               <>
-                <EmailVerify />
+                <EmailVerify setForm={setForm} />
                 <View className="justify-between flex-row w-[100%]">
                   <TouchableOpacity onPress={() => setForm("signup")}>
                     <Text className="font-semibold">Back</Text>

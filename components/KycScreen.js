@@ -48,20 +48,16 @@ export const KycScreen = ({ navigation }) => {
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
           <View className="flex-1 bg-[#28e068] flex-column justify-end pt-[40%]">
             <View></View>
-            <View className="mb-[20px]">
-              <Text className="text-2xl font-bold px-[20px] mb-[10px]">
-                KYC
-              </Text>
-              <Text className="text-[12px] px-[20px] mb-[10px]">
+
+            <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-between py-[30px] px-[30px]">
+              <Text className="text-2xl font-bold mb-[10px]">KYC</Text>
+              <Text className="text-[12px] mb-[10px]">
                 Financial regulators in Nigeria require you to verify your
                 identity to use this service.
               </Text>
-              <Text className="text-[12px] px-[20px] text-[#ffff] font-semibold">
+              <Text className="text-[12px] text-[#28e068] font-semibold">
                 This is a mandatory step that enables us serve you better.
               </Text>
-            </View>
-
-            <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-between py-[30px] px-[30px]">
               <View className=" max-h-[100%] flex-column w-[100%] items-center">
                 {form === "first" ? (
                   <KycFirstForm />

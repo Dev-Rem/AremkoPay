@@ -1,30 +1,41 @@
 import React from "react";
 import { Text, View, TextInput } from "react-native";
 import ButtonCustom from "./utils/ButtonCustom";
+import CustomFormField from "./utils/CustomFormField";
+
 export const SignUp = ({ setForm }) => {
   return (
     <>
       <Text className="text-2xl">Sign Up</Text>
-      <Text className="text-l">Create an AremkoPay account</Text>
+      <Text className="text-l mb-[10%]">Create an AremkoPay account</Text>
 
       <View className="flex-column w-[100%] items-center">
-        <TextInput
-          placeholder="Email address"
-          placeholderTextColor={"#b2b2b2"}
-          className="h-[60] w-[85%] bg-[#F2F2F2] rounded-[10px] p-[20px] my-[8%]"
-        />
-        <View className=" flex-row w-[85%] justify-between">
-          <TextInput
-            placeholder="Password"
-            placeholderTextColor={"#b2b2b2"}
-            className="h-[60] w-[45%] bg-[#F2F2F2] rounded-[10px] p-[20px] "
+        <View className="flex-column w-[100%]">
+          <Text className="font-medium m-[5]">Email address</Text>
+          <CustomFormField
+            extraStyle="h-[60px] w-[100%] mb-[5%]"
+            placeholder={"Email address"}
+            inputMode={"email"}
           />
+        </View>
 
-          <TextInput
-            placeholder="Confirm password"
-            placeholderTextColor={"#b2b2b2"}
-            className="h-[60] w-[45%] bg-[#F2F2F2] rounded-[10px] p-[20px] mb-[15%]"
-          />
+        <View className=" flex-row w-[100%] justify-between">
+          <View className="flex-column w-[45%]">
+            <Text className="font-medium m-[5]">Password</Text>
+            <CustomFormField
+              extraStyle="h-[60px] mb-[5%]"
+              placeholder={"Password"}
+              secureTextEntry={true}
+            />
+          </View>
+          <View className="flex-column w-[45%]">
+            <Text className="font-medium m-[5]">Confirm password</Text>
+            <CustomFormField
+              extraStyle="h-[60px] my-[5%] p-[10px]"
+              placeholder={"Confirm password"}
+              secureTextEntry={true}
+            />
+          </View>
         </View>
 
         <ButtonCustom title="Sign Up" onPress={() => setForm("verifyemail")} />

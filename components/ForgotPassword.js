@@ -1,20 +1,28 @@
 import React from "react";
 import { Text, View, TextInput } from "react-native";
 import ButtonCustom from "./utils/ButtonCustom";
+import CustomFormField from "./utils/CustomFormField";
 
 export const ForgotPassword = ({ setForm }) => {
   return (
     <>
       <Text className="text-2xl">Forgot Password</Text>
-      <Text className="text-l">Request code for password reset</Text>
+      <Text className="text-l mb-[10%]">Request code for password reset</Text>
 
       <View className="flex-column  w-[100%] items-center">
-        <TextInput
-          placeholder="Email address"
-          placeholderTextColor={"#b2b2b2"}
-          className="h-[60] w-[85%] bg-[#F2F2F2] rounded-[10px] p-[20px] my-[8%]"
+        <View className=" flex-column w-[100%]">
+          <Text className="font-medium m-[5]">Email address</Text>
+          <CustomFormField
+            extraStyle="h-[60px] w-[100%] mb-[5%]"
+            placeholder={"Email address"}
+            secureTextEntry={true}
+          />
+        </View>
+
+        <ButtonCustom
+          title="Send code"
+          onPress={() => setForm("resetpassword")}
         />
-        <ButtonCustom title="Send code" />
       </View>
     </>
   );
