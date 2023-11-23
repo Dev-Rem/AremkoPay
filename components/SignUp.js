@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
-
-export const SignUp = () => {
+import { Text, View, TextInput } from "react-native";
+import ButtonCustom from "./utils/ButtonCustom";
+export const SignUp = ({ setForm }) => {
   return (
     <>
       <Text className="text-2xl">Sign Up</Text>
@@ -27,9 +27,7 @@ export const SignUp = () => {
           />
         </View>
 
-        <TouchableOpacity className="h-[60] w-[85%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[15px] mb-[10%]">
-          <Text className="text-xl font-semibold text-center">Sign Up</Text>
-        </TouchableOpacity>
+        <ButtonCustom title="Sign Up" onPress={() => setForm("verifyemail")} />
       </View>
     </>
   );

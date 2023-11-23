@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
+import { Text, View, TextInput } from "react-native";
+import ButtonCustom from "./utils/ButtonCustom";
 
 export const ForgotPassword = ({ setForm }) => {
   return (
@@ -13,12 +14,7 @@ export const ForgotPassword = ({ setForm }) => {
           placeholderTextColor={"#b2b2b2"}
           className="h-[60] w-[85%] bg-[#F2F2F2] rounded-[10px] p-[20px] my-[8%]"
         />
-        <TouchableOpacity
-          onPress={() => setForm("resetpassword")}
-          className="h-[60] w-[85%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] p-[15] mb-[10%]"
-        >
-          <Text className="text-xl font-semibold text-center">Send code</Text>
-        </TouchableOpacity>
+        <ButtonCustom title="Send code" />
       </View>
     </>
   );

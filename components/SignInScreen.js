@@ -13,6 +13,7 @@ import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { ForgotPassword } from "./ForgotPassword";
 import { ResetPassword } from "./ResetPassword";
+import { EmailVerify } from "./EmailVerify";
 export const SignInScreen = ({ navigation }) => {
   const [form, setForm] = React.useState("signin");
   const [checked, setChecked] = React.useState(false);
@@ -23,15 +24,15 @@ export const SignInScreen = ({ navigation }) => {
     >
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View className="flex-1 bg-[#28e068] flex-column justify-between ">
-          <View></View>
-          <Image
+          <View className="bg-[#ffff] h-[25%] w-[25%] rounded-[50%]"></View>
+          {/* <Image
             source={require("../assets/AremkoPay.png")}
             className="w-[85%] h-[80px] rounded-t-[10px] rounded-b-[10px] m-[30px]"
-          />
+          /> */}
           <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-center p-[30px] ">
             {form === "signup" ? (
               <>
-                <SignUp />
+                <SignUp setForm={setForm} />
                 <View className="justify-between flex-row w-[100%]">
                   <TouchableOpacity onPress={() => setForm("signin")}>
                     <Text className="font-semibold">Sign In</Text>
@@ -41,7 +42,7 @@ export const SignInScreen = ({ navigation }) => {
                     <Checkbox
                       value={checked}
                       onValueChange={() => setChecked(!checked)}
-                      color={checked ? "#DAE8DA" : undefined}
+                      color={checked ? "#28e068" : undefined}
                       style={{ transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }] }}
                     />
                     <TouchableOpacity>
@@ -90,6 +91,21 @@ export const SignInScreen = ({ navigation }) => {
                 <ResetPassword />
                 <View className="justify-between flex-row w-[100%]">
                   <TouchableOpacity onPress={() => setForm("forgotpassword")}>
+                    <Text className="font-semibold">Back</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => setForm("resetpassword")}>
+                    <Text className="font-semibold">Resend code</Text>
+                  </TouchableOpacity>
+                </View>
+              </>
+            ) : (
+              <></>
+            )}
+            {form === "verifyemail" ? (
+              <>
+                <EmailVerify />
+                <View className="justify-between flex-row w-[100%]">
+                  <TouchableOpacity onPress={() => setForm("signup")}>
                     <Text className="font-semibold">Back</Text>
                   </TouchableOpacity>
                   <TouchableOpacity onPress={() => setForm("resetpassword")}>

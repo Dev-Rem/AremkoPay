@@ -16,8 +16,8 @@ export const EnterLoginPin = ({ pin, setPin, setForm }) => {
   };
 
   return (
-    <>
-      <View className="flex-row mb-[10] justify-center mb-[10%]">
+    <View>
+      <View className="flex-row  justify-center mb-[8%]">
         {Array.from({ length: 4 }).map((_, index) => (
           <TouchableOpacity
             key={index}
@@ -35,7 +35,7 @@ export const EnterLoginPin = ({ pin, setPin, setForm }) => {
             onPress={() => handleNumberPress(index + 1)}
             className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
           >
-            <Text className="text-[20px]">{index + 1}</Text>
+            <Text className="text-[30px]">{index + 1}</Text>
           </TouchableOpacity>
         ))}
         <TouchableOpacity
@@ -52,11 +52,11 @@ export const EnterLoginPin = ({ pin, setPin, setForm }) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => setForm("second")}
-          className="w-[25%] h-[20%] justify-center items-center m-[10] rounded-[10px]"
+          className="w-[25%] h-[20%] bg-[#28e068] justify-center items-center m-[10] rounded-[10px]"
         >
           <Icon name="arrow-forward" type="material" size={35} />
         </TouchableOpacity>
       </View>
-    </>
+    </View>
   );
 };

@@ -56,7 +56,7 @@ export const KycScreen = ({ navigation }) => {
                 Financial regulators in Nigeria require you to verify your
                 identity to use this service.
               </Text>
-              <Text className="text-[12px] px-[20px] text-[#ffff]">
+              <Text className="text-[12px] px-[20px] text-[#ffff] font-semibold">
                 This is a mandatory step that enables us serve you better.
               </Text>
             </View>

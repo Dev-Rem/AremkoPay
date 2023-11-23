@@ -15,8 +15,8 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
     }
   };
   return (
-    <>
-      <View className="flex-row mb-[10] justify-center mb-[10%]">
+    <View>
+      <View className="flex-row justify-center mb-[8%]">
         {Array.from({ length: 4 }).map((_, index) => (
           <TouchableOpacity
             key={index}
@@ -51,11 +51,11 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate("Dashboard")}
-          className="w-[25%] h-[20%] justify-center items-center m-[10] rounded-[10px]"
+          className="w-[25%] h-[20%] bg-[#28e068] justify-center items-center m-[10] rounded-[10px]"
         >
           <Icon name="done-all" type="material" size={35} />
         </TouchableOpacity>
       </View>
-    </>
+    </View>
   );
 };

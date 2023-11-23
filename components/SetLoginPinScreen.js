@@ -3,7 +3,6 @@ import {
   View,
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
-  TouchableOpacity,
   Text,
   Keyboard,
 } from "react-native";
@@ -23,18 +22,23 @@ export const SetLoginPinScreen = ({ navigation }) => {
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View className="flex-1 bg-[#28e068] flex-column justify-end pt-[40%]">
           <View></View>
-          <View className="mb-[20px]">
-            <Text className="text-2xl font-bold px-[20px] mb-[10px]">
-              {form === "first" ? "Enter" : "Confirm"} login pin
-            </Text>
-            <Text className="text-[12px] px-[20px]">
-              {form === "first"
-                ? "Before we proceed, let's set up a secure login PIN for your account. This PIN will be used to enhance the security of your account. Make sure to choose a PIN that is easy for you to remember, but not too obvious to others."
-                : ""}
-            </Text>
-          </View>
 
-          <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-center py-[30px] ">
+          <View className="bg-[#FFFF] min-h-[80%] w-[100%] rounded-tr-[50px] justify-center py-[30px] ">
+            <View className="mb-[30px]">
+              <Text className="text-2xl font-bold px-[20px] mb-[10px]">
+                {form === "first" ? "Enter" : "Confirm"} login pin
+              </Text>
+              <Text className="text-[12px] px-[20px]">
+                {form === "first"
+                  ? "Let's set up a secure login PIN for your account. This PIN will be used to enhance the security of your account."
+                  : ""}
+              </Text>
+              <Text className="text-[12px] px-[20px] text-[#28e068]">
+                {form === "first" || form === "second"
+                  ? "Make sure to choose a PIN that is easy for you to remember, but not too obvious to others."
+                  : ""}
+              </Text>
+            </View>
             {form === "first" ? (
               <EnterLoginPin pin={pin} setPin={setPin} setForm={setForm} />
             ) : (
