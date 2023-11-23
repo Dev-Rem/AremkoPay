@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-  Modal,
-  Pressable,
-} from "react-native";
+import { Text, View, TouchableOpacity, Modal, Pressable } from "react-native";
 import CustomFormField from "./utils/CustomFormField";
 
 export const KycSecondForm = ({ pickImage, types, type, setType }) => {

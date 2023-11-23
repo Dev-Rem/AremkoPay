@@ -2,12 +2,15 @@ import React from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
 import ButtonCustom from "./utils/ButtonCustom";
 import CustomFormField from "./utils/CustomFormField";
+import FormHeader from "./utils/FormHeader";
 
 export const SignIn = ({ navigation }) => {
   return (
     <>
-      <Text className="text-2xl">Sign In</Text>
-      <Text className="text-l mb-[10%]">Sign in to your AremkoPay account</Text>
+      <FormHeader
+        header={"Sign In"}
+        subHeader={"Sign in to your AremkoPay account."}
+      />
 
       <View className="flex-column  w-[100%] items-center">
         <View className=" flex-column w-[100%] justify-between">

@@ -2,12 +2,15 @@ import React from "react";
 import { Text, View, TextInput } from "react-native";
 import ButtonCustom from "./utils/ButtonCustom";
 import CustomFormField from "./utils/CustomFormField";
+import FormHeader from "./utils/FormHeader";
 
 export const ForgotPassword = ({ setForm }) => {
   return (
     <>
-      <Text className="text-2xl">Forgot Password</Text>
-      <Text className="text-l mb-[10%]">Request code for password reset</Text>
+      <FormHeader
+        header={"Forgot Password"}
+        subHeader={"Request code for password reset."}
+      />
 
       <View className="flex-column  w-[100%] items-center">
         <View className=" flex-column w-[100%]">

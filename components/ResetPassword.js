@@ -2,15 +2,17 @@ import React from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
 import CustomFormField from "./utils/CustomFormField";
 import ButtonCustom from "./utils/ButtonCustom";
+import FormHeader from "./utils/FormHeader";
 
 export const ResetPassword = ({ setForm }) => {
   return (
     <>
-      <Text className="text-2xl">Reset Password</Text>
-      <Text className="text-l">Reset sent to example@email.com</Text>
-      <Text className="text-l mb-[10%]">
-        Provide reset code and new password
-      </Text>
+      <FormHeader
+        header={"Reset Password"}
+        subHeader={
+          "Reset code has been sent to example@email.com. Provide reset code and new password."
+        }
+      />
 
       <View className="flex-column w-[100%] items-center">
         <View className="flex-column w-[100%] ">

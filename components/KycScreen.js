@@ -12,6 +12,7 @@ import { Icon } from "@rneui/themed";
 import { KycFirstForm } from "./KycFirstForm";
 import { KycSecondForm } from "./KycSecondForm";
 import * as ImagePicker from "expo-image-picker";
+import FormHeader from "./utils/FormHeader";
 
 export const KycScreen = ({ navigation }) => {
   const [form, setForm] = React.useState("first");
@@ -50,14 +51,12 @@ export const KycScreen = ({ navigation }) => {
             <View></View>
 
             <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-between py-[30px] px-[30px]">
-              <Text className="text-2xl font-bold mb-[10px]">KYC</Text>
-              <Text className="text-[12px] mb-[10px]">
-                Financial regulators in Nigeria require you to verify your
-                identity to use this service.
-              </Text>
-              <Text className="text-[12px] text-[#28e068] font-semibold">
-                This is a mandatory step that enables us serve you better.
-              </Text>
+              <FormHeader
+                header={"KYC"}
+                subHeader={
+                  " Financial regulators in Nigeria require you to verify your identity to use this service."
+                }
+              />
               <View className=" max-h-[100%] flex-column w-[100%] items-center">
                 {form === "first" ? (
                   <KycFirstForm />

@@ -2,12 +2,15 @@ import React from "react";
 import { Text, View, TextInput } from "react-native";
 import ButtonCustom from "./utils/ButtonCustom";
 import CustomFormField from "./utils/CustomFormField";
+import FormHeader from "./utils/FormHeader";
 
 export const SignUp = ({ setForm }) => {
   return (
     <>
-      <Text className="text-2xl">Sign Up</Text>
-      <Text className="text-l mb-[10%]">Create an AremkoPay account</Text>
+      <FormHeader
+        header={"Sign Up"}
+        subHeader={"Create an AremkoPay account"}
+      />
 
       <View className="flex-column w-[100%] items-center">
         <View className="flex-column w-[100%]">

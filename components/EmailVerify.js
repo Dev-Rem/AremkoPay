@@ -2,14 +2,17 @@ import React from "react";
 import { Text, View, TextInput } from "react-native";
 import ButtonCustom from "./utils/ButtonCustom";
 import CustomFormField from "./utils/CustomFormField";
+import FormHeader from "./utils/FormHeader";
 
 export const EmailVerify = ({ setForm }) => {
   return (
     <>
-      <Text className="text-2xl">Verify email address</Text>
-      <Text className="text-l mb-[10%]">
-        An email with a verification code has been sent to your inbox.
-      </Text>
+      <FormHeader
+        header={"Verify email address"}
+        subHeader={
+          "An email with a verification code has been sent to your inbox."
+        }
+      />
 
       <View className="flex-column w-[100%] items-center">
         <View className=" flex-column w-[100%]">
