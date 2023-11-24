@@ -23,11 +23,13 @@ export const SignInScreen = ({ navigation }) => {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-        <View className="flex-1 bg-[#28e068] flex-column justify-between ">
+        <View className="flex-1 bg-[#ffff] flex-column justify-between ">
           <View></View>
+          <View></View>
+
           <Image
-            source={require("../assets/AremkoPay.png")}
-            className="w-[85%] h-[80px] rounded-tr-[60px] rounded-br-[10px] mt-[30px] "
+            source={require("../../assets/AremkoPay.png")}
+            className="w-[85%] h-[80px] m-[30px] "
           />
           <View className="bg-[#FFFF] min-h-[60%] w-[100%] rounded-tr-[50px] justify-center p-[30px] ">
             {form === "signup" ? (

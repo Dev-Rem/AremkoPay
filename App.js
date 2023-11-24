@@ -1,9 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { SignInScreen } from "./components/SignInScreen";
-import { KycScreen } from "./components/KycScreen";
-import { SetLoginPinScreen } from "./components/SetLoginPinScreen";
+import { SignInScreen } from "./components/authFlow/SignInScreen";
+import { KycScreen } from "./components/authFlow/KycScreen";
+import { SetLoginPinScreen } from "./components/authFlow/SetLoginPinScreen";
 import { DashboardScreen } from "./components/DashboardScreen";
 
 const Stack = createStackNavigator();

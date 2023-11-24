@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
-import CustomFormField from "./utils/CustomFormField";
+import CustomFormField from "../utils/CustomFormField";
 
 export const KycFirstForm = () => {
   return (

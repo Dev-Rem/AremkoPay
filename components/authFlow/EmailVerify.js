@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View, TextInput } from "react-native";
-import ButtonCustom from "./utils/ButtonCustom";
-import CustomFormField from "./utils/CustomFormField";
-import FormHeader from "./utils/FormHeader";
+import ButtonCustom from "../utils/ButtonCustom";
+import CustomFormField from "../utils/CustomFormField";
+import FormHeader from "../utils/FormHeader";
 
 export const EmailVerify = ({ setForm }) => {
   return (

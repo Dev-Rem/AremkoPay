@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, TouchableOpacity, Modal, Pressable } from "react-native";
-import CustomFormField from "./utils/CustomFormField";
+import CustomFormField from "../utils/CustomFormField";
 
 export const KycSecondForm = ({ pickImage, types, type, setType }) => {
   const [isVisible, setIsVisible] = React.useState(false);

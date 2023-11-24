@@ -2,27 +2,28 @@ import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 import { Icon } from "@rneui/themed";
 
-export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
+export const EnterLoginPin = ({ pin, setPin, setForm }) => {
   const handleNumberPress = (num) => {
-    if (confirmPin.length < 4) {
-      setConfirmPin(confirmPin + num);
+    if (pin.length < 4) {
+      setPin(pin + num);
     }
   };
 
   const handleDeletePress = () => {
-    if (confirmPin.length > 0) {
-      setConfirmPin(confirmPin.slice(0, -1));
+    if (pin.length > 0) {
+      setPin(pin.slice(0, -1));
     }
   };
+
   return (
     <View>
-      <View className="flex-row justify-center mb-[8%]">
+      <View className="flex-row  justify-center mb-[8%]">
         {Array.from({ length: 4 }).map((_, index) => (
           <TouchableOpacity
             key={index}
-            className="w-[5%] h-[20px] rounded-[30px] ${bg-[#f4f4f4]} mx-[5%] border-[2px] border-[gray]"
+            className="w-[5%] h-[20px] rounded-[30px] bg-[#f4f4f4] mx-[5%] border-[2px] border-[gray]"
             style={{
-              backgroundColor: confirmPin.length > index ? "gray" : "#ffff",
+              backgroundColor: pin.length > index ? "gray" : "#ffff",
             }}
           ></TouchableOpacity>
         ))}
@@ -31,14 +32,14 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
         {Array.from({ length: 9 }).map((_, index) => (
           <TouchableOpacity
             key={index}
-            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
             onPress={() => handleNumberPress(index + 1)}
+            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
           >
-            <Text className="text-[20px]">{index + 1}</Text>
+            <Text className="text-[25px]">{index + 1}</Text>
           </TouchableOpacity>
         ))}
         <TouchableOpacity
-          onPress={handleDeletePress}
+          onPress={() => handleDeletePress()}
           className="w-[25%] h-[20%] justify-center items-center m-[10]  rounded-[10px]"
         >
           <Icon name="backspace" type="material" size={30} />
@@ -50,10 +51,10 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
           <Text className="text-[20px]">0</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Dashboard")}
+          onPress={() => setForm("second")}
           className="w-[25%] h-[20%] bg-[#28e068] justify-center items-center m-[10] rounded-[10px]"
         >
-          <Icon name="done-all" type="material" size={35} />
+          <Icon name="arrow-forward" type="material" size={35} />
         </TouchableOpacity>
       </View>
     </View>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, View, TextInput, TouchableOpacity } from "react-native";
-import CustomFormField from "./utils/CustomFormField";
-import ButtonCustom from "./utils/ButtonCustom";
-import FormHeader from "./utils/FormHeader";
+import CustomFormField from "../utils/CustomFormField";
+import ButtonCustom from "../utils/ButtonCustom";
+import FormHeader from "../utils/FormHeader";
 
 export const ResetPassword = ({ setForm }) => {
   return (
