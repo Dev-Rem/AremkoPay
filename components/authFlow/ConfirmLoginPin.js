@@ -50,7 +50,7 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
           <Text className="text-[20px]">0</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Dashboard")}
+          onPress={() => navigation.navigate("Tabs")}
           className="w-[25%] h-[20%] bg-[#28e068] justify-center items-center m-[10] rounded-[10px]"
         >
           <Icon name="done-all" type="material" size={35} />

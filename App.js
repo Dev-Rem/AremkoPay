@@ -4,9 +4,29 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { SignInScreen } from "./components/authFlow/SignInScreen";
 import { KycScreen } from "./components/authFlow/KycScreen";
 import { SetLoginPinScreen } from "./components/authFlow/SetLoginPinScreen";
-import { DashboardScreen } from "./components/DashboardScreen";
+import { DashboardScreen } from "./components/Dashboard/DashboardScreen";
+import { LogBox } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { TabBar } from "./components/utils/BottomIconMenu";
+import { WalletScreen } from "./components/Wallet/Wallet";
+import { ProfileScreen } from "./components/Profile/Profile";
 
+LogBox.ignoreAllLogs();
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+function Tabs() {
+  return (
+    <Tab.Navigator
+      initialRouteName={"Dashboard"}
+      tabBar={(props) => <TabBar {...props} />}
+    >
+      <Stack.Screen name="Dashboard" component={DashboardScreen} />
+      <Tab.Screen name="Wallet" component={WalletScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
+}
 
 export default function App() {
   return (
@@ -19,8 +39,9 @@ export default function App() {
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="Kyc" component={KycScreen} />
         <Stack.Screen name="SetPin" component={SetLoginPinScreen} />
-        <Stack.Screen name="Dashboard" component={DashboardScreen} />
+        <Stack.Screen name="Tabs" component={Tabs} />
       </Stack.Navigator>
+      <StatusBar style="auto" />
     </NavigationContainer>
   );
 }
