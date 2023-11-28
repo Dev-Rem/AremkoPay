@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  KeyboardAvoidingView,
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-  Text,
-  Keyboard,
-} from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import { Icon } from "@rneui/themed";
 export const DashboardScreen = ({ navigation }) => {
   return (
@@ -25,6 +18,20 @@ export const DashboardScreen = ({ navigation }) => {
             style={{ paddingTop: 4 }}
           />
         </TouchableOpacity>
+      </View>
+      <View className="mx-[3%]">
+        <TouchableOpacity className="flex-row">
+          <Text className="text-[18px] mr-[8]">Current balance</Text>
+          <Icon
+            name={"visibility"}
+            type="material"
+            size={18}
+            style={{ paddingTop: 2 }}
+          />
+        </TouchableOpacity>
+
+        <Text className="text-[40%]">$20,000</Text>
+        <Text className="text-[#ffff]">Ledger balance: $20,300</Text>
       </View>
       <View className="bg-[#FFFF] min-h-[70%] w-[100%] rounded-tr-[50px] justify-center p-[30px] "></View>
     </View>

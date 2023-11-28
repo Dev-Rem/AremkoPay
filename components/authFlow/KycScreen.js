@@ -4,7 +4,7 @@ import {
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
   TouchableOpacity,
-  Text,
+  Image,
   Keyboard,
   ScrollView,
 } from "react-native";
@@ -47,54 +47,56 @@ export const KycScreen = ({ navigation }) => {
     >
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-          <View className="flex-1 bg-[#28e068] flex-column justify-end pt-[40%]">
-            {/* <View></View> */}
-
-            <View className="bg-[#FFFF] min-h-[70%] w-[100%] rounded-tr-[50px] justify-between py-[30px] px-[30px]">
-              <FormHeader
-                header={"KYC"}
-                subHeader={
-                  "Financial regulators in Nigeria require you to verify your identity to use this service."
-                }
+          <View className="flex-1 bg-[#ffff] flex-column justify-center p-[30px]">
+            <View className="mb-[10%] mt-[10%] w-[100%] justify-center items-center">
+              <Image
+                source={require("../../assets/AremkoPay.png")}
+                className="w-[90%] h-[70px] "
               />
-              <View className=" max-h-[100%] flex-column w-[100%] items-center">
-                {form === "first" ? (
-                  <KycFirstForm />
-                ) : (
-                  <KycSecondForm
-                    pickImage={pickImage}
-                    types={types}
-                    type={type}
-                    setType={setType}
-                  />
-                )}
-              </View>
-              <View className="w-[100%] justify-between flex-row mb-[20px]">
-                {form === "second" ? (
-                  <TouchableOpacity
-                    onPress={() => setForm("first")}
-                    className="h-[40] w-[25%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
-                  >
-                    <Icon name={"arrow-back"} type="material" size={30} />
-                  </TouchableOpacity>
-                ) : (
-                  <View></View>
-                )}
+            </View>
+            <FormHeader
+              header={"KYC"}
+              subHeader={
+                "Financial regulators in Nigeria require you to verify your identity to use this service."
+              }
+            />
+            <View className=" max-h-[100%] flex-column w-[100%] items-center">
+              {form === "first" ? (
+                <KycFirstForm />
+              ) : (
+                <KycSecondForm
+                  pickImage={pickImage}
+                  types={types}
+                  type={type}
+                  setType={setType}
+                />
+              )}
+            </View>
+            <View className="w-[100%] justify-between flex-row mb-[20px]">
+              {form === "second" ? (
                 <TouchableOpacity
-                  onPress={() =>
-                    form === "first"
-                      ? setForm("second")
-                      : navigation.navigate("SetPin")
-                  }
+                  onPress={() => setForm("first")}
                   className="h-[40] w-[25%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
                 >
-                  {form === "second" ? (
-                    <Icon name={"done-all"} type="material" size={30} />
-                  ) : (
-                    <Icon name={"arrow-forward"} type="material" size={30} />
-                  )}
+                  <Icon name={"arrow-back"} type="material" size={30} />
                 </TouchableOpacity>
-              </View>
+              ) : (
+                <View></View>
+              )}
+              <TouchableOpacity
+                onPress={() =>
+                  form === "first"
+                    ? setForm("second")
+                    : navigation.navigate("SetPin")
+                }
+                className="h-[40] w-[25%] bg-[#28e068] rounded-tr-[60px] rounded-b-[10px] rounded-tl-[10px] mt-[8%] justify-center"
+              >
+                {form === "second" ? (
+                  <Icon name={"done-all"} type="material" size={30} />
+                ) : (
+                  <Icon name={"arrow-forward"} type="material" size={30} />
+                )}
+              </TouchableOpacity>
             </View>
           </View>
         </TouchableWithoutFeedback>

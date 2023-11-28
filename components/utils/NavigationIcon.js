@@ -8,6 +8,7 @@ const NavigationIcon = ({ route, isFocused }) => {
     Dashboard: "dashboard",
     Profile: "account-circle",
     Wallet: "account-balance-wallet",
+    Payments: "payment",
   };
 
   const iconName = iconMap[route] || "help-outline"; // Use a default icon if no mapping is found

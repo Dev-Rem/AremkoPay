@@ -30,15 +30,15 @@ export const TabBar = ({ state, descriptors, navigation }) => {
         return (
           <View
             key={index}
-            className="flex-1 justify-center align-center my-[5px] rounded-[2px] border-[#333B42]"
+            className="flex-1 justify-center align-center rounded-[2px] border-[#333B42]"
           >
-            <Pressable onPress={onPress} className="mb-[5%]">
+            <Pressable onPress={onPress} className="mb-[10px]">
               <View
                 style={{
                   justifyContent: "center",
                   alignItems: "center",
                   flex: 1,
-                  padding: 15,
+                  padding: 10,
                 }}
               >
                 <NavigationIcon route={label} isFocused={isFocused} />

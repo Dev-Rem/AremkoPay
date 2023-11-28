@@ -8,7 +8,7 @@ import {
   Keyboard,
 } from "react-native";
 import { Icon } from "@rneui/themed";
-export const WalletScreen = ({ navigation }) => {
+export const PaymentsScreen = ({ navigation }) => {
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
