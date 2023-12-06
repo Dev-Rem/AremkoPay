@@ -101,6 +101,11 @@ export const ProfileScreen = ({ navigation }) => {
               subHeader="Set or change your 2fa settings"
               iconName="navigate-next"
               iconColor="#474747"
+              onPress={() =>
+                navigation.navigate("ProfileSecondScreen", {
+                  use: "2FA",
+                })
+              }
             />
             <CustomListitem
               header="Get Help"

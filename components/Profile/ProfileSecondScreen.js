@@ -8,6 +8,7 @@ import {
 import { UpdatePassword } from "./UpdatePassword";
 import { ChangePin } from "./ChangePin";
 import { WithdrawalAccounts } from "./WithdrawalAccounts";
+import { TwoFactorAuthentication } from "./TwoFactorAuthentication";
 
 export const ProfileSecondScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -33,6 +34,11 @@ export const ProfileSecondScreen = ({ navigation, route }) => {
           )}
           {use === "Withdrawal Accounts" ? (
             <WithdrawalAccounts navigation={navigation} />
+          ) : (
+            <></>
+          )}
+          {use === "2FA" ? (
+            <TwoFactorAuthentication navigation={navigation} />
           ) : (
             <></>
           )}
