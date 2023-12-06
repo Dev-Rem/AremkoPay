@@ -90,6 +90,11 @@ export const ProfileScreen = ({ navigation }) => {
               subHeader="Add or remove withdrawal accounts"
               iconName="navigate-next"
               iconColor="#474747"
+              onPress={() =>
+                navigation.navigate("ProfileSecondScreen", {
+                  use: "Withdrawal Accounts",
+                })
+              }
             />
             <CustomListitem
               header="Two-Factor-Authentication"

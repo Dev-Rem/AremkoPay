@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import { UpdatePassword } from "./UpdatePassword";
 import { ChangePin } from "./ChangePin";
+import { WithdrawalAccounts } from "./WithdrawalAccounts";
 
 export const ProfileSecondScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -27,6 +28,11 @@ export const ProfileSecondScreen = ({ navigation, route }) => {
           {use === "Change Pin" ? <ChangePin navigation={navigation} /> : <></>}
           {use === "Update Password" ? (
             <UpdatePassword navigation={navigation} />
+          ) : (
+            <></>
+          )}
+          {use === "Withdrawal Accounts" ? (
+            <WithdrawalAccounts navigation={navigation} />
           ) : (
             <></>
           )}
