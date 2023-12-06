@@ -8,7 +8,8 @@ import {
   Keyboard,
 } from "react-native";
 import { Icon } from "@rneui/themed";
-import { ListItem } from "@rneui/themed";
+import { CustomListitem } from "./CustomListitem";
+
 export const ProfileScreen = ({ navigation }) => {
   return (
     <KeyboardAvoidingView
@@ -61,94 +62,53 @@ export const ProfileScreen = ({ navigation }) => {
           </View>
 
           <View className="bg-[#FFFF] min-h-[70%] w-[100%] rounded-tr-[50px] justify-start py-[5%] px-[20] ">
-            <TouchableOpacity className="w-[100%] h-[50px] justify-between items-center flex-row mb-[3%] ">
-              <View>
-                <Text className="text-[18%] text-[#28e068]">Change pin</Text>
-                <Text className="text-[12%] text-[#474747]">
-                  Change your login pin{" "}
-                </Text>
-              </View>
-
-              <Icon
-                name={"navigate-next"}
-                type="material"
-                size={30}
-                color="#474747"
-                style={{ paddingTop: 4 }}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity className="w-[100%] h-[10%]  justify-between items-center flex-row mb-[3%]">
-              <View>
-                <Text className="text-[18%] text-[#28e068]">
-                  Update password
-                </Text>
-                <Text className="text-[12%] text-[#474747]">
-                  Change your account password
-                </Text>
-              </View>
-              <Icon
-                name={"navigate-next"}
-                type="material"
-                size={30}
-                color="#474747"
-                style={{ paddingTop: 4 }}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity className="w-[100%] h-[10%] justify-between items-center flex-row mb-[3%]">
-              <View>
-                <Text className="text-[18%] text-[#28e068]">
-                  Withdrawal accounts
-                </Text>
-                <Text className="text-[12%] text-[#474747]">
-                  Add or remove withdrawal accounts
-                </Text>
-              </View>
-              <Icon
-                name={"navigate-next"}
-                type="material"
-                size={30}
-                color="#474747"
-                style={{ paddingTop: 4 }}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity className="w-[100%] h-[10%]  justify-between items-center flex-row mb-[3%]">
-              <View>
-                <Text className="text-[18%] text-[#28e068]">
-                  Two-Factor-Authentication
-                </Text>
-                <Text className="text-[12%] text-[#474747]">
-                  Set or change your 2fa settings
-                </Text>
-              </View>
-              <Icon
-                name={"navigate-next"}
-                type="material"
-                size={30}
-                color="#474747"
-                style={{ paddingTop: 4 }}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity className="w-[100%] h-[10%]  justify-between items-center flex-row mb-[3%]">
-              <View>
-                <Text className="text-[18%] text-[#28e068]">Get Help</Text>
-                <Text className="text-[12%] text-[#474747]">
-                  Get support or send feedback and reveiews
-                </Text>
-              </View>
-              <Icon
-                name={"navigate-next"}
-                type="material"
-                size={30}
-                color="#474747"
-                style={{ paddingTop: 4 }}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity className="w-[100%] h-[10%]  justify-between items-center flex-row mb-[3%]">
-              <View>
-                <Text className="text-[18%] text-[#ff0000]">Sign out</Text>
-              </View>
-              <Icon name={"logout"} type="material" size={25} color="red" />
-            </TouchableOpacity>
+            <CustomListitem
+              header="Change Pin"
+              subHeader="Change your login pin"
+              iconName="navigate-next"
+              iconColor="#474747"
+              headerColor="#28e068"
+              onPress={() =>
+                navigation.navigate("ProfileSecondScreen", {
+                  use: "Change Pin",
+                })
+              }
+            />
+            <CustomListitem
+              header="Update Password"
+              subHeader="Change your account password"
+              iconName="navigate-next"
+              iconColor="#474747"
+              onPress={() =>
+                navigation.navigate("ProfileSecondScreen", {
+                  use: "Update Password",
+                })
+              }
+            />
+            <CustomListitem
+              header="Withdrawal accounts"
+              subHeader="Add or remove withdrawal accounts"
+              iconName="navigate-next"
+              iconColor="#474747"
+            />
+            <CustomListitem
+              header="Two-Factor-Authentication"
+              subHeader="Set or change your 2fa settings"
+              iconName="navigate-next"
+              iconColor="#474747"
+            />
+            <CustomListitem
+              header="Get Help"
+              subHeader="Get support or send feedback and reveiews"
+              iconName="navigate-next"
+              iconColor="#474747"
+            />
+            <CustomListitem
+              header="Sign Out"
+              iconName="logout"
+              iconColor="#ff0000"
+              headerColor="#ff0000"
+            />
           </View>
         </View>
       </TouchableWithoutFeedback>
