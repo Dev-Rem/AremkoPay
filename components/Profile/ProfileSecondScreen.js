@@ -9,6 +9,7 @@ import { UpdatePassword } from "./UpdatePassword";
 import { ChangePin } from "./ChangePin";
 import { WithdrawalAccounts } from "./WithdrawalAccounts";
 import { TwoFactorAuthentication } from "./TwoFactorAuthentication";
+import { GetHelp } from "./GetHelp";
 
 export const ProfileSecondScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -42,6 +43,7 @@ export const ProfileSecondScreen = ({ navigation, route }) => {
           ) : (
             <></>
           )}
+          {use === "Get Help" ? <GetHelp navigation={navigation} /> : <></>}
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>

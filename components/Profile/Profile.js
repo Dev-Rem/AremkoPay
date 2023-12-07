@@ -112,6 +112,11 @@ export const ProfileScreen = ({ navigation }) => {
               subHeader="Get support or send feedback and reveiews"
               iconName="navigate-next"
               iconColor="#474747"
+              onPress={() =>
+                navigation.navigate("ProfileSecondScreen", {
+                  use: "Get Help",
+                })
+              }
             />
             <CustomListitem
               header="Sign Out"
