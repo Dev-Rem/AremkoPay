@@ -6,6 +6,7 @@ const CustomFormField = ({
   placeholder,
   inputMode,
   secureTextEntry,
+  maxLength,
 }) => {
   return (
     <TextInput
@@ -13,6 +14,7 @@ const CustomFormField = ({
       inputMode={inputMode}
       placeholderTextColor={"#b2b2b2"}
       secureTextEntry={secureTextEntry}
+      maxLength={maxLength}
       className={`${extraStyle} bg-[#F2F2F2]  rounded-[10px] p-[10px] `}
     />
   );

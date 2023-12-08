@@ -8,7 +8,7 @@ import {
   Keyboard,
 } from "react-native";
 import { Icon } from "@rneui/themed";
-import { CustomListitem } from "./CustomListitem";
+import { CustomListitem } from "../utils/CustomListitem";
 
 export const ProfileScreen = ({ navigation }) => {
   return (
@@ -29,7 +29,14 @@ export const ProfileScreen = ({ navigation }) => {
             ></View>
 
             <Text className="text-[20%] mb-[3%]">Aremu Oluwaseyi Festus</Text>
-            <TouchableOpacity className="flex-row  ">
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("ProfileSecondScreen", {
+                  use: "Account Details",
+                })
+              }
+              className="flex-row  "
+            >
               <Text className="text-[15%] text-[#FFFF]">Account details</Text>
               <Icon
                 name={"navigate-next"}
@@ -38,27 +45,6 @@ export const ProfileScreen = ({ navigation }) => {
                 color="#ffff"
               />
             </TouchableOpacity>
-
-            {/* <View className="flex-row justify-between w-[100%]">
-              <TouchableOpacity className="flex-row bg-[#ffff] px-[3%] py-[2%] rounded-[40%] opacity-[0.9] border-[1px]">
-                <Text className="pt-[5px] pr-[5]">@username</Text>
-                <Icon
-                  name={"content-copy"}
-                  type="material"
-                  size={18}
-                  style={{ paddingTop: 4 }}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity className="flex-row bg-[#ffff] px-[3%] py-[2%] rounded-[40%] opacity-[0.9] border-[1px]">
-                <Text className="pt-[5px] pr-[5]">2304323421</Text>
-                <Icon
-                  name={"content-copy"}
-                  type="material"
-                  size={18}
-                  style={{ paddingTop: 4 }}
-                />
-              </TouchableOpacity>
-            </View> */}
           </View>
 
           <View className="bg-[#FFFF] min-h-[70%] w-[100%] rounded-tr-[50px] justify-start py-[5%] px-[20] ">
@@ -67,7 +53,7 @@ export const ProfileScreen = ({ navigation }) => {
               subHeader="Change your login pin"
               iconName="navigate-next"
               iconColor="#474747"
-              headerColor="#28e068"
+              headerColor="text-[#28e068]"
               onPress={() =>
                 navigation.navigate("ProfileSecondScreen", {
                   use: "Change Pin",
@@ -78,6 +64,7 @@ export const ProfileScreen = ({ navigation }) => {
               header="Update Password"
               subHeader="Change your account password"
               iconName="navigate-next"
+              headerColor="text-[#28e068]"
               iconColor="#474747"
               onPress={() =>
                 navigation.navigate("ProfileSecondScreen", {
@@ -89,6 +76,7 @@ export const ProfileScreen = ({ navigation }) => {
               header="Withdrawal accounts"
               subHeader="Add or remove withdrawal accounts"
               iconName="navigate-next"
+              headerColor="text-[#28e068]"
               iconColor="#474747"
               onPress={() =>
                 navigation.navigate("ProfileSecondScreen", {
@@ -100,6 +88,7 @@ export const ProfileScreen = ({ navigation }) => {
               header="Two-Factor-Authentication"
               subHeader="Set or change your 2fa settings"
               iconName="navigate-next"
+              headerColor="text-[#28e068]"
               iconColor="#474747"
               onPress={() =>
                 navigation.navigate("ProfileSecondScreen", {
@@ -111,6 +100,7 @@ export const ProfileScreen = ({ navigation }) => {
               header="Get Help"
               subHeader="Get support or send feedback and reveiews"
               iconName="navigate-next"
+              headerColor="text-[#28e068]"
               iconColor="#474747"
               onPress={() =>
                 navigation.navigate("ProfileSecondScreen", {
@@ -121,8 +111,9 @@ export const ProfileScreen = ({ navigation }) => {
             <CustomListitem
               header="Sign Out"
               iconName="logout"
-              iconColor="#ff0000"
-              headerColor="#ff0000"
+              iconColor="#ef0e0e"
+              headerColor="text-[#ef0e0e]"
+              onPress={() => navigation.navigate("SignIn")}
             />
           </View>
         </View>

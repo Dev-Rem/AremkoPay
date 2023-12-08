@@ -10,6 +10,7 @@ import { ChangePin } from "./ChangePin";
 import { WithdrawalAccounts } from "./WithdrawalAccounts";
 import { TwoFactorAuthentication } from "./TwoFactorAuthentication";
 import { GetHelp } from "./GetHelp";
+import { AccountDetails } from "./AccountDetails/AccountDetails";
 
 export const ProfileSecondScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -27,6 +28,12 @@ export const ProfileSecondScreen = ({ navigation, route }) => {
     >
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View className="flex-1 bg-[#ffff] flex-column justify-center p-[30px] ">
+          {use === "Account Details" ? (
+            <AccountDetails navigation={navigation} />
+          ) : (
+            <></>
+          )}
+
           {use === "Change Pin" ? <ChangePin navigation={navigation} /> : <></>}
           {use === "Update Password" ? (
             <UpdatePassword navigation={navigation} />

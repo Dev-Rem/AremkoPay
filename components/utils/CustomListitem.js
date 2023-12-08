@@ -9,20 +9,15 @@ export const CustomListitem = ({
   iconName,
   iconColor,
   onPress,
+  disabled,
 }) => {
-  return (
+  return !disabled ? (
     <TouchableOpacity
       onPress={onPress}
       className="w-[100%] h-[10%]  justify-between items-center flex-row mb-[3%]"
     >
       <View>
-        <Text
-          className={`text-[18%] text-[${
-            headerColor ? headerColor : "#28e068"
-          }]`}
-        >
-          {header}
-        </Text>
+        <Text className={`${headerColor} text-[18%]`}>{header}</Text>
         <Text className="text-[12%] text-[#474747]">{subHeader}</Text>
       </View>
       <Icon
@@ -33,5 +28,14 @@ export const CustomListitem = ({
         style={{ paddingTop: 4 }}
       />
     </TouchableOpacity>
+  ) : (
+    <View className="my-[2%]">
+      <Text
+        className={`text-[18%] ${headerColor ? headerColor : "text-[#28e068]"}`}
+      >
+        {header}
+      </Text>
+      <Text className="text-[12%] text-[#474747]">{subHeader}</Text>
+    </View>
   );
 };
