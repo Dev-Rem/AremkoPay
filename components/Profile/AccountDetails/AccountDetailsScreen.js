@@ -8,6 +8,7 @@ import {
 import { PhoneNumber } from "./PhoneNumber";
 import { EmailAddress } from "./EmailAddress";
 import { KycIdentification } from "./KycIdentification";
+import { CloseAccount } from "./CloseAccount";
 
 export const AccountDetailsScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -37,6 +38,11 @@ export const AccountDetailsScreen = ({ navigation, route }) => {
           )}
           {use === "Kyc and Identification" ? (
             <KycIdentification navigation={navigation} />
+          ) : (
+            <></>
+          )}
+          {use === "Close Account" ? (
+            <CloseAccount navigation={navigation} />
           ) : (
             <></>
           )}

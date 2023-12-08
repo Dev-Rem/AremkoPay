@@ -73,24 +73,26 @@ export const AccountDetails = ({ navigation }) => {
       <CustomListitem
         header="Close Account"
         subHeader="Deactivate your Aremkopay account"
-        iconName="expand-more"
+        iconName="navigate-next"
         headerColor="text-[#ef0e0e]"
         iconColor="#474747"
-        onPress={() => {
-          setShowOverlay(true);
-          setUse("Close Account");
-        }}
+        onPress={() =>
+          navigation.navigate("AccountDetailsScreen", {
+            use: "Close Account",
+          })
+        }
       />
       <CustomListitem
         header="Restrict Account"
         subHeader="Stop all transactions incase of emergencies"
-        iconName="expand-more"
+        iconName="navigate-next"
         headerColor="text-[#ef0e0e]"
         iconColor="#474747"
-        onPress={() => {
-          setShowOverlay(true);
-          setUse("Restrict Account");
-        }}
+        onPress={() =>
+          navigation.navigate("AccountDetailsScreen", {
+            use: "Restrict Account",
+          })
+        }
       />
 
       <Overlay showOverlay={showOverlay} setShowOverlay={setShowOverlay}>
