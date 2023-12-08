@@ -6,6 +6,7 @@ import {
   Keyboard,
 } from "react-native";
 import { PhoneNumber } from "./PhoneNumber";
+import { EmailAddress } from "./EmailAddress";
 
 export const AccountDetailsScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -25,6 +26,11 @@ export const AccountDetailsScreen = ({ navigation, route }) => {
         <View className="flex-1 bg-[#ffff] flex-column justify-center p-[30px] ">
           {use === "Phone Number" ? (
             <PhoneNumber navigation={navigation} />
+          ) : (
+            <></>
+          )}
+          {use === "Email Address" ? (
+            <EmailAddress navigation={navigation} />
           ) : (
             <></>
           )}

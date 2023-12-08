@@ -49,13 +49,14 @@ export const AccountDetails = ({ navigation }) => {
       <CustomListitem
         header="example@gmail.com"
         subHeader="Email Address"
-        iconName="expand-more"
+        iconName="navigate-next"
         headerColor="text-[#28e068]"
         iconColor="#474747"
-        onPress={() => {
-          setShowOverlay(true);
-          setUse("Email Address");
-        }}
+        onPress={() =>
+          navigation.navigate("AccountDetailsScreen", {
+            use: "Email Address",
+          })
+        }
       />
       <CustomListitem
         header="Verified"

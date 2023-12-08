@@ -38,7 +38,7 @@ export const PhoneNumber = ({ navigation }) => {
         </View>
       )}
       <ButtonCustom
-        title={form === "first" ? "Next" : "Done"}
+        title={form === "first" ? "Next" : "Verify"}
         onPress={() => {
           form === "first"
             ? setForm("second")
