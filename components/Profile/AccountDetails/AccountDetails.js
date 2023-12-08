@@ -61,13 +61,14 @@ export const AccountDetails = ({ navigation }) => {
       <CustomListitem
         header="Verified"
         subHeader="Kyc and Identification"
-        iconName="expand-more"
+        iconName="navigate-next"
         headerColor="text-[#28e068]"
         iconColor="#474747"
-        onPress={() => {
-          setShowOverlay(true);
-          setUse("KYC");
-        }}
+        onPress={() =>
+          navigation.navigate("AccountDetailsScreen", {
+            use: "Kyc and Identification",
+          })
+        }
       />
       <CustomListitem
         header="Close Account"

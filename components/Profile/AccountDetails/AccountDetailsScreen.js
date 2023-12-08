@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import { PhoneNumber } from "./PhoneNumber";
 import { EmailAddress } from "./EmailAddress";
+import { KycIdentification } from "./KycIdentification";
 
 export const AccountDetailsScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -31,6 +32,11 @@ export const AccountDetailsScreen = ({ navigation, route }) => {
           )}
           {use === "Email Address" ? (
             <EmailAddress navigation={navigation} />
+          ) : (
+            <></>
+          )}
+          {use === "Kyc and Identification" ? (
+            <KycIdentification navigation={navigation} />
           ) : (
             <></>
           )}

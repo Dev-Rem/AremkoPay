@@ -31,7 +31,7 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
         {Array.from({ length: 9 }).map((_, index) => (
           <TouchableOpacity
             key={index}
-            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
+            className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10%]"
             onPress={() => handleNumberPress(index + 1)}
           >
             <Text className="text-[25px]">{index + 1}</Text>
@@ -39,19 +39,19 @@ export const ConfirmLoginPin = ({ confirmPin, setConfirmPin, navigation }) => {
         ))}
         <TouchableOpacity
           onPress={handleDeletePress}
-          className="w-[25%] h-[20%] justify-center items-center m-[10]  rounded-[10px]"
+          className="w-[25%] h-[20%] justify-center items-center m-[10]  rounded-[10%]"
         >
           <Icon name="backspace" type="material" size={30} />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleNumberPress(0)}
-          className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10px]"
+          className="w-[25%] h-[20%] justify-center items-center m-[10] bg-[#f4f4f4] rounded-[10%]"
         >
           <Text className="text-[20px]">0</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate("Tabs")}
-          className="w-[25%] h-[20%] bg-[#28e068] justify-center items-center m-[10] rounded-[10px]"
+          className="w-[25%] h-[20%] bg-[#28e068] justify-center items-center m-[10] rounded-[10%] rounded-tr-[60%]"
         >
           <Icon name="done-all" type="material" size={35} />
         </TouchableOpacity>
