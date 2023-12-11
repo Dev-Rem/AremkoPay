@@ -9,6 +9,7 @@ import { PhoneNumber } from "./PhoneNumber";
 import { EmailAddress } from "./EmailAddress";
 import { KycIdentification } from "./KycIdentification";
 import { CloseAccount } from "./CloseAccount";
+import { RestrictAccount } from "./RestrictAccount";
 
 export const AccountDetailsScreen = ({ navigation, route }) => {
   const { use } = route.params;
@@ -43,6 +44,11 @@ export const AccountDetailsScreen = ({ navigation, route }) => {
           )}
           {use === "Close Account" ? (
             <CloseAccount navigation={navigation} />
+          ) : (
+            <></>
+          )}
+          {use === "Restrict Account" ? (
+            <RestrictAccount navigation={navigation} />
           ) : (
             <></>
           )}

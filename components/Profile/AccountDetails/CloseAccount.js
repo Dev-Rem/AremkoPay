@@ -8,6 +8,7 @@ import ButtonCustom from "../../utils/ButtonCustom";
 export const CloseAccount = ({ navigation }) => {
   const [selectedAnswer, setSelectedAnswer] = React.useState("");
   const [showOverlay, setShowOverlay] = React.useState(false);
+  const [form, setForm] = React.useState("first");
 
   return (
     <View>
@@ -33,22 +34,41 @@ export const CloseAccount = ({ navigation }) => {
         important to us.
       </Text>
 
-      <View className=" flex-column w-[100%] justify-between">
-        <Text className="font-medium m-[5]">
-          Your reason for closing your account?
-        </Text>
-        <TouchableOpacity
-          onPress={() => setShowOverlay(true)}
-          className="h-[60px] w-[100%] mb-[5%] bg-[#F2F2F2] justify-center rounded-[10px] p-[10px] "
-        >
-          {selectedAnswer === "" ? (
-            <Text className="text-[#b2b2b2]">Reasons</Text>
-          ) : (
-            <Text className="">{selectedAnswer}</Text>
-          )}
-        </TouchableOpacity>
-      </View>
-      <ButtonCustom title="Next" />
+      {form === "first" ? (
+        <View className=" flex-column w-[100%] justify-between">
+          <Text className="font-medium m-[5]">
+            Your reason for closing your account?
+          </Text>
+          <TouchableOpacity
+            onPress={() => setShowOverlay(true)}
+            className="h-[60px] w-[100%] mb-[5%] bg-[#F2F2F2] justify-center rounded-[10px] p-[10px] "
+          >
+            {selectedAnswer === "" ? (
+              <Text className="text-[#b2b2b2]">Reasons</Text>
+            ) : (
+              <Text className="">{selectedAnswer}</Text>
+            )}
+          </TouchableOpacity>
+        </View>
+      ) : (
+        <View className="items-center mb-[5%]">
+          <Text className="mb-[5%]">
+            Kindly place a call to us so we can assist with closing your
+            account.
+          </Text>
+          <Text className="text-[18%] font-semibold">+23490-6500-2380</Text>
+        </View>
+      )}
+      <ButtonCustom
+        title={form === "first" ? "Next" : "Close"}
+        onPress={() =>
+          form === "first"
+            ? setForm("second")
+            : navigation.navigate("ProfileSecondScreen", {
+                use: "Account Details",
+              })
+        }
+      />
       <Overlay showOverlay={showOverlay} setShowOverlay={setShowOverlay}>
         <Picker
           selectedValue={selectedAnswer}
