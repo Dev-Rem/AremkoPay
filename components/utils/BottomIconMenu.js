@@ -4,7 +4,7 @@ import NavigationIcon from "./NavigationIcon";
 
 export const TabBar = ({ state, descriptors, navigation }) => {
   return (
-    <View className="flex-row absolute bottom-[0] bg-[#ffff] rounded-tr-[60px] border-[1px]">
+    <View className="flex-row absolute bottom-[0] bg-[#ffff]  border-[0.5px]">
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =

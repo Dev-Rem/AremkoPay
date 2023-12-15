@@ -10,9 +10,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./components/utils/BottomIconMenu";
 import { WalletScreen } from "./components/Wallet/Wallet";
 import { ProfileScreen } from "./components/Profile/Profile";
-import { PaymentsScreen } from "./components/Payments/Payments";
 import { ProfileSecondScreen } from "./components/Profile/ProfileSecondScreen";
 import { AccountDetailsScreen } from "./components/Profile/AccountDetails/AccountDetailsScreen";
+import { PaymentsSecondScreen } from "./components/Dashboard/Payments/PaymentsSecondScreen";
 
 LogBox.ignoreAllLogs();
 const Stack = createStackNavigator();
@@ -26,7 +26,6 @@ function Tabs() {
     >
       <Stack.Screen name="Dashboard" component={DashboardScreen} />
       <Tab.Screen name="Wallet" component={WalletScreen} />
-      <Tab.Screen name="Payments" component={PaymentsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
@@ -50,6 +49,10 @@ export default function App() {
         <Stack.Screen
           name="AccountDetailsScreen"
           component={AccountDetailsScreen}
+        />
+        <Stack.Screen
+          name="PaymentsSecondScreen"
+          component={PaymentsSecondScreen}
         />
         <Stack.Screen name="Tabs" component={Tabs} />
       </Stack.Navigator>
