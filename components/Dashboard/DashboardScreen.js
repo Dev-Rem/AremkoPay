@@ -49,7 +49,13 @@ export const DashboardScreen = ({ navigation }) => {
           navigation={navigation}
           onPress={() => setShowOverlay(true)}
         />
-        <PaymentBoxes iconName="cash-minus" boxTitle="Withdraw" />
+        <PaymentBoxes
+          iconName="cash-minus"
+          boxTitle="Withdraw"
+          onPress={() =>
+            navigation.navigate("DashboardSecondScreen", { use: "Withdraw" })
+          }
+        />
         <PaymentBoxes iconName="phone" boxTitle="Airtime" />
         <PaymentBoxes iconName="web" boxTitle="Data" />
         <PaymentBoxes iconName="lightbulb-on" boxTitle="Electricity" />

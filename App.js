@@ -12,7 +12,7 @@ import { WalletScreen } from "./components/Wallet/Wallet";
 import { ProfileScreen } from "./components/Profile/Profile";
 import { ProfileSecondScreen } from "./components/Profile/ProfileSecondScreen";
 import { AccountDetailsScreen } from "./components/Profile/AccountDetails/AccountDetailsScreen";
-import { PaymentsSecondScreen } from "./components/Dashboard/Payments/PaymentsSecondScreen";
+import { DashboardSecondScreen } from "./components/Dashboard/Payments/DashboardSecondScreen";
 
 LogBox.ignoreAllLogs();
 const Stack = createStackNavigator();
@@ -51,8 +51,8 @@ export default function App() {
           component={AccountDetailsScreen}
         />
         <Stack.Screen
-          name="PaymentsSecondScreen"
-          component={PaymentsSecondScreen}
+          name="DashboardSecondScreen"
+          component={DashboardSecondScreen}
         />
         <Stack.Screen name="Tabs" component={Tabs} />
       </Stack.Navigator>

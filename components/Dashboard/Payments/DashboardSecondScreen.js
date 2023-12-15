@@ -5,8 +5,8 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import { TopUp } from "./TopUp";
-export const PaymentsSecondScreen = ({ navigation, route }) => {
+import { Withdraw } from "./Withdraw";
+export const DashboardSecondScreen = ({ navigation, route }) => {
   const { use } = route.params;
   React.useLayoutEffect(() => {
     navigation.setOptions({
@@ -23,6 +23,7 @@ export const PaymentsSecondScreen = ({ navigation, route }) => {
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View className="flex-1 bg-[#ffff] flex-column justify-center p-[30px] ">
           {/* {use === "Top Up" ? <TopUp navigation={navigation} /> : <></>} */}
+          {use === "Withdraw" ? <Withdraw navigation={navigation} /> : <></>}
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
