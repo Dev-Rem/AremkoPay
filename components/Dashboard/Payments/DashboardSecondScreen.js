@@ -6,6 +6,7 @@ import {
   Keyboard,
 } from "react-native";
 import { Withdraw } from "./Withdraw";
+import { Airtime } from "./Airtime";
 export const DashboardSecondScreen = ({ navigation, route }) => {
   const { use } = route.params;
   React.useLayoutEffect(() => {
@@ -22,8 +23,8 @@ export const DashboardSecondScreen = ({ navigation, route }) => {
     >
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View className="flex-1 bg-[#ffff] flex-column justify-center p-[30px] ">
-          {/* {use === "Top Up" ? <TopUp navigation={navigation} /> : <></>} */}
           {use === "Withdraw" ? <Withdraw navigation={navigation} /> : <></>}
+          {use === "Airtime" ? <Airtime navigation={navigation} /> : <></>}
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>

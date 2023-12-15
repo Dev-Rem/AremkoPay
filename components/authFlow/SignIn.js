@@ -32,7 +32,7 @@ export const SignIn = ({ navigation }) => {
 
         <ButtonCustom
           title="Sign In"
-          onPress={() => navigation.navigate("Kyc")}
+          onPress={() => navigation.navigate("Tabs")}
         />
       </View>
     </>
