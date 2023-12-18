@@ -27,7 +27,7 @@ export const ProfileScreen = ({ navigation }) => {
         <Text className="text-[20%] mb-[3%]">Aremu Oluwaseyi Festus</Text>
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate("ProfileSecondScreen", {
+            navigation.navigate("SecondScreen", {
               use: "Account Details",
             })
           }
@@ -51,7 +51,7 @@ export const ProfileScreen = ({ navigation }) => {
         iconColor="#474747"
         headerColor="text-[#28e068]"
         onPress={() =>
-          navigation.navigate("ProfileSecondScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Change Pin",
           })
         }
@@ -63,7 +63,7 @@ export const ProfileScreen = ({ navigation }) => {
         headerColor="text-[#28e068]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("ProfileSecondScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Update Password",
           })
         }
@@ -75,7 +75,7 @@ export const ProfileScreen = ({ navigation }) => {
         headerColor="text-[#28e068]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("ProfileSecondScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Withdrawal Accounts",
           })
         }
@@ -87,7 +87,7 @@ export const ProfileScreen = ({ navigation }) => {
         headerColor="text-[#28e068]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("ProfileSecondScreen", {
+          navigation.navigate("SecondScreen", {
             use: "2FA",
           })
         }
@@ -99,7 +99,7 @@ export const ProfileScreen = ({ navigation }) => {
         headerColor="text-[#28e068]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("ProfileSecondScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Get Help",
           })
         }

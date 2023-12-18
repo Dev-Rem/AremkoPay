@@ -10,10 +10,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./components/utils/BottomIconMenu";
 import { WalletScreen } from "./components/Wallet/Wallet";
 import { ProfileScreen } from "./components/Profile/Profile";
-import { ProfileSecondScreen } from "./components/Profile/ProfileSecondScreen";
-import { AccountDetailsScreen } from "./components/Profile/AccountDetails/AccountDetailsScreen";
-import { DashboardSecondScreen } from "./components/Dashboard/Payments/DashboardSecondScreen";
-
+import { SecondScreen } from "./components/utils/SecondScreen";
 LogBox.ignoreAllLogs();
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -42,18 +39,7 @@ export default function App() {
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="Kyc" component={KycScreen} />
         <Stack.Screen name="SetPin" component={SetLoginPinScreen} />
-        <Stack.Screen
-          name="ProfileSecondScreen"
-          component={ProfileSecondScreen}
-        />
-        <Stack.Screen
-          name="AccountDetailsScreen"
-          component={AccountDetailsScreen}
-        />
-        <Stack.Screen
-          name="DashboardSecondScreen"
-          component={DashboardSecondScreen}
-        />
+        <Stack.Screen name="SecondScreen" component={SecondScreen} />
         <Stack.Screen name="Tabs" component={Tabs} />
       </Stack.Navigator>
       <StatusBar style="auto" />

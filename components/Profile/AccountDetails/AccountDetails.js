@@ -41,7 +41,7 @@ export const AccountDetails = ({ navigation }) => {
         headerColor="text-[#28e068]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("AccountDetailsScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Phone Number",
           })
         }
@@ -53,7 +53,7 @@ export const AccountDetails = ({ navigation }) => {
         headerColor="text-[#28e068]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("AccountDetailsScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Email Address",
           })
         }
@@ -65,7 +65,7 @@ export const AccountDetails = ({ navigation }) => {
         headerColor="text-[#28e068]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("AccountDetailsScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Kyc and Identification",
           })
         }
@@ -77,7 +77,7 @@ export const AccountDetails = ({ navigation }) => {
         headerColor="text-[#ef0e0e]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("AccountDetailsScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Close Account",
           })
         }
@@ -89,7 +89,7 @@ export const AccountDetails = ({ navigation }) => {
         headerColor="text-[#ef0e0e]"
         iconColor="#474747"
         onPress={() =>
-          navigation.navigate("AccountDetailsScreen", {
+          navigation.navigate("SecondScreen", {
             use: "Restrict Account",
           })
         }

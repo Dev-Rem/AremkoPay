@@ -53,14 +53,14 @@ export const DashboardScreen = ({ navigation }) => {
           iconName="cash-minus"
           boxTitle="Withdraw"
           onPress={() =>
-            navigation.navigate("DashboardSecondScreen", { use: "Withdraw" })
+            navigation.navigate("SecondScreen", { use: "Withdraw" })
           }
         />
         <PaymentBoxes
           iconName="phone"
           boxTitle="Airtime"
           onPress={() =>
-            navigation.navigate("DashboardSecondScreen", { use: "Airtime" })
+            navigation.navigate("SecondScreen", { use: "Airtime" })
           }
         />
         <PaymentBoxes iconName="web" boxTitle="Data" />
