@@ -4,7 +4,7 @@ import { Icon } from "@rneui/themed";
 import { PaymentBoxes } from "../utils/PaymentBoxes";
 import { Overlay } from "../utils/Overlay";
 import { TopUp } from "./Payments/TopUp";
-export const DashboardScreen = ({ navigation }) => {
+export const DashboardScreen = ({ navigation, route }) => {
   const [showOverlay, setShowOverlay] = React.useState(false);
   return (
     <View className="flex-1 bg-[#ffff] flex-column justify-between ">
@@ -63,7 +63,11 @@ export const DashboardScreen = ({ navigation }) => {
             navigation.navigate("SecondScreen", { use: "Airtime" })
           }
         />
-        <PaymentBoxes iconName="web" boxTitle="Data" />
+        <PaymentBoxes
+          iconName="web"
+          boxTitle="Data"
+          onPress={() => navigation.navigate("SecondScreen", { use: "Data" })}
+        />
         <PaymentBoxes iconName="lightbulb-on" boxTitle="Electricity" />
         <PaymentBoxes iconName="monitor" boxTitle="TV" />
         <PaymentBoxes iconName="airplane-takeoff" boxTitle="Book Flight" />

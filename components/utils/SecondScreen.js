@@ -19,9 +19,11 @@ import { EmailAddress } from "../Profile/AccountDetails/EmailAddress";
 import { KycIdentification } from "../Profile/AccountDetails/KycIdentification";
 import { CloseAccount } from "../Profile/AccountDetails/CloseAccount";
 import { RestrictAccount } from "../Profile/AccountDetails/RestrictAccount";
+import { Data } from "../Dashboard/Payments/Data";
 
 export const SecondScreen = ({ navigation, route }) => {
   const { use } = route.params;
+  console.log(route);
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: true,
@@ -87,6 +89,7 @@ export const SecondScreen = ({ navigation, route }) => {
           ) : (
             <></>
           )}
+          {use === "Data" ? <Data navigation={navigation} /> : <></>}
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
